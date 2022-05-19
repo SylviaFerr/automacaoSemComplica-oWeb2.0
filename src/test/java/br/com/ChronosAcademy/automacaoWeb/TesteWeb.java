@@ -13,6 +13,7 @@ import static org.junit.Assert.*;
 
 public class TesteWeb {
 
+<<<<<<< HEAD
     WebDriver driver;
     Driver driverWeb;
 
@@ -21,27 +22,60 @@ public class TesteWeb {
     public void inicializaTeste(){
         driverWeb = new Driver("chrome");
         driver = driverWeb.getDriver();
+=======
+    ChromeDriver driver;
+
+    @Before
+    public void inicializaTeste(){
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+>>>>>>> master
         driver.get("https://www.chronosacademy.com.br");
     }
 
 
     @Test
     public void primeiroTeste(){
+<<<<<<< HEAD
         //section[2]/div[3]/div/div/div/div/div[1]/div/h4
 
         String xpathTitulo = "//section[2]//h4";
 
+=======
+
+        String xpathTitulo = "/html/body/div/div/div/div/div/section[2]/div[3]/div/div/div/div/div[1]/div/h4";
+>>>>>>> master
         WebElement txtTitulo = driver.findElement(By.xpath(xpathTitulo));
         String titulo = txtTitulo.getText();
         assertEquals("Porque Tempo É Conhecimento", titulo);
 
+<<<<<<< HEAD
+=======
     }
 
+    @Test
+    public void primeiroTeste1(){
+
+        String xpathTitulo = "/html/body/div/div/div/div/div/section[2]/div[3]/div/div/div/div/div[2]/div/div/a";
+        WebElement txtTitulo = driver.findElement(By.xpath(xpathTitulo));
+        String titulo = txtTitulo.getText();
+        assertEquals("Conheça Nossos Cursos", titulo);
+
+>>>>>>> master
+    }
 
     @After
     public void finalizateste(){
         driver.quit();
 
+<<<<<<< HEAD
+    @After
+    public void finalizateste(){
+        driver.quit();
+
+=======
+>>>>>>> master
     }
 
 }

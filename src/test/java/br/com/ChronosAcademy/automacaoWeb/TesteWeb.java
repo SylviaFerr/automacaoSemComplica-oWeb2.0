@@ -14,6 +14,7 @@ import static org.junit.Assert.*;
 public class TesteWeb {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     WebDriver driver;
     Driver driverWeb;
 
@@ -25,6 +26,10 @@ public class TesteWeb {
 =======
     ChromeDriver driver;
 
+=======
+    ChromeDriver driver;
+
+>>>>>>> master
     @Before
     public void inicializaTeste(){
         WebDriverManager.chromedriver().setup();
@@ -38,11 +43,14 @@ public class TesteWeb {
     @Test
     public void primeiroTeste(){
 <<<<<<< HEAD
+<<<<<<< HEAD
         //section[2]/div[3]/div/div/div/div/div[1]/div/h4
 
         String xpathTitulo = "//section[2]//h4";
 
 =======
+=======
+>>>>>>> master
 
         String xpathTitulo = "/html/body/div/div/div/div/div/section[2]/div[3]/div/div/div/div/div[1]/div/h4";
 >>>>>>> master
@@ -50,6 +58,7 @@ public class TesteWeb {
         String titulo = txtTitulo.getText();
         assertEquals("Porque Tempo É Conhecimento", titulo);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -75,6 +84,24 @@ public class TesteWeb {
         driver.quit();
 
 =======
+>>>>>>> master
+=======
+    }
+
+    @Test
+    public void primeiroTeste1(){
+
+        String xpathTitulo = "/html/body/div/div/div/div/div/section[2]/div[3]/div/div/div/div/div[2]/div/div/a";
+        WebElement txtTitulo = driver.findElement(By.xpath(xpathTitulo));
+        String titulo = txtTitulo.getText();
+        assertEquals("Conheça Nossos Cursos", titulo);
+
+    }
+
+    @After
+    public void finalizateste(){
+        driver.quit();
+
 >>>>>>> master
     }
 

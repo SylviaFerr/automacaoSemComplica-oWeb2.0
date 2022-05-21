@@ -40,7 +40,7 @@ public class TesteWeb {
         //section[2]/div[3]/div/div/div/div/div[1]/div/h4
 
 
-        assertEquals("Porque Tempo É Conhecimento", principalPage .getTitulo() );
+        assertEquals("Porque Tempo É Conhecimento", principalPage . getTitulo());
 
     }
 

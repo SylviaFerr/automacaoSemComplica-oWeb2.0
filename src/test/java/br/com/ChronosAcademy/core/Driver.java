@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Driver {
-    private WebDriver driver;
+    private static WebDriver driver;
 
 
 
@@ -36,11 +36,10 @@ public class Driver {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-        }
+                 }
         driver.manage().window().maximize();
     }
-
-    public WebDriver getDriver(){
+    public static WebDriver getDriver(){
         return driver;
     }
 

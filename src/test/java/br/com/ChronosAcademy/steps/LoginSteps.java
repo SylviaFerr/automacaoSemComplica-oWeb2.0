@@ -15,13 +15,13 @@ public class LoginSteps {
     LoginPage loginPage;
 
     @Before
-    public void iniciaNavegador(){
+    public void iniciaNavegador() {
         new Driver("chrome");
     }
 
     @After
-    public void fecharNavegador(){
-        Driver .getDriver().quit();
+    public void fecharNavegador() {
+        Driver.getDriver().quit();
     }
 
 
@@ -31,15 +31,21 @@ public class LoginSteps {
         loginPage = new LoginPage();
         loginPage.clickBtnLogin();
     }
+
     @Quando("for realizado um clique fora da modal")
     public void forRealizadoUmCliqueForaDaModal() {
-        loginPage = new LoginPage();
+        loginPage.clickDivFecharmodal();
     }
+
     @Entao("a janela modal deve ser fechada")
-    public void aJanelaModalDeveSerFechada() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void aJanelaModalDeveSerFechada() throws Exception {
+        try {
+            loginPage.invisilityOfBtnFechar();
+        } catch (Exception e){
+           throw new Exception("A janela modal nao foi fechada");
     }
+
+}
 
     @Quando("for realizado um clique no icone de fechar")
     public void forRealizadoUmCliqueNoIconeDeFechar() {

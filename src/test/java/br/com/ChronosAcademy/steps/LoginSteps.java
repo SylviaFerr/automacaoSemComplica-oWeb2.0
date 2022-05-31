@@ -31,6 +31,7 @@ public class LoginSteps {
         Driver.getDriver().get("https://www.advantageonlineshopping.com/");
         loginPage = new LoginPage();
         loginPage.clickBtnLogin();
+        loginPage .visibilityOfBtnFechar();
     }
 
     @Quando("for realizado um clique fora da modal")

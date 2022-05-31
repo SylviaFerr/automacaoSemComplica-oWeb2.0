@@ -8,7 +8,7 @@ Funcionalidade: Login
   Cenário:  Fechar a modal ao clicar fora da mesma
     Quando for realizado um clique fora da modal
     Entao a janela modal deve ser fechada
-
+@fecharModalIcone
   Cenario: Fechar a modal ao clicar no icone de fechar
     Quando for realizado um clique no icone de fechar
     Entao a janela modal deve ser fechada
